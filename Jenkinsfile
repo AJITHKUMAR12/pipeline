@@ -1,2 +1,11 @@
-//sh "$date"
-echo "this is practing"
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
