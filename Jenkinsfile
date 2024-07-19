@@ -3,6 +3,10 @@ pipeline {
 
     stages {
         stage('Hello') {
+            input {
+  message 'execute'
+  
+}
             steps {
                 echo 'checking'
             }
