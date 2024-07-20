@@ -1,8 +1,10 @@
 pipeline {
     agent any
     parameters {
-  choice choices: ['1.10', '1.20', '1.30'], description: 'Select the version', name: 'VERSION'
-  booleanParam defaultValue: true, description: 'check and execute', name: 'check'
+  //choice choices: ['1.10', '1.20', '1.30'], description: 'Select the version', name: 'VERSION'
+  //booleanParam defaultValue: true, description: 'check and execute', name: 'check'
+          choice(name: 'VERSION', choices: ['1.10', '1.20', '1.30'], description: '')
+        booleanParam (name: 'execute', defaultValue: true, description: '')
 }
 
 
@@ -10,7 +12,7 @@ pipeline {
         stage('build') {
             when{
                 expression{
-                    params.check
+                    params.execute
                 }
             }
    
@@ -25,6 +27,7 @@ pipeline {
             steps {
                 echo 'testing the application'
                 echo " the version for testing is ${params.VERSION}"
+                
             }
         }
     
