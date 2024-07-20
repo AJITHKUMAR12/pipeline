@@ -19,7 +19,7 @@ pipeline {
             }
         }
     }
-    stages {
+   
         stage('test') {
    
             steps {
@@ -28,7 +28,7 @@ pipeline {
             }
         }
     }
-    stages {
+
         stage('deploy') {
    
             steps {
