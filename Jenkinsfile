@@ -24,7 +24,7 @@ pipeline {
    
             steps {
                 echo 'testing the application'
-                echo " the version for testing is $(params.VERSION)"
+                echo " the version for testing is ${params.VERSION}"
             }
         }
     }
