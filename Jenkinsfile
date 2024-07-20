@@ -1,10 +1,9 @@
 pipeline {
     agent any
     parameters {
-  //choice choices: ['1.10', '1.20', '1.30'], description: 'Select the version', name: 'VERSION'
-  //booleanParam defaultValue: true, description: 'check and execute', name: 'check'
-          choice(name: 'VERSION', choices: ['1.10', '1.20', '1.30'], description: 'select the version')
-        booleanParam (name: 'execute', defaultValue: true, description: 'check and exceute')
+  choice choices: ['1.10', '1.20', '1.30'], description: 'Select the version', name: 'VERSION'
+  booleanParam defaultValue: true, description: 'check and execute', name: 'check'
+       
 }
 
 
