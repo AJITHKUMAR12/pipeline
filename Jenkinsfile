@@ -18,7 +18,7 @@ pipeline {
                 echo 'building the application'
             }
         }
-    }
+    
    
         stage('test') {
    
@@ -27,7 +27,7 @@ pipeline {
                 echo " the version for testing is ${params.VERSION}"
             }
         }
-    }
+    
 
         stage('deploy') {
    
